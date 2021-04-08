@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap');
-
 * {
     margin: 0;
     padding: 0;
@@ -13,6 +12,10 @@ div.nav-bar {
     padding: 1rem 6rem;
     width: 100vw;
     background: #304353;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
 }
 
 div.logo {
@@ -100,7 +103,7 @@ div.background {
     box-shadow: 2px 2px 15px 0 rgb(135 135 135 / 40%);
     padding: 15px 40px;
     width: 550px;
-    height: 220px;
+    height: 20%;
     position: relative;
 }
 
@@ -198,7 +201,6 @@ div.circle {
     border-radius: 50%;
     background: #bcc3c7;
     margin-top: 2rem;
-    
 }
 
 div.box1 h5 {
@@ -232,10 +234,10 @@ div.gallery-content p {
 }
 
 div.gallery-img {
-   display: flex;
-   flex-wrap: wrap;
-   justify-content: center;
-   padding-top: 3rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 3rem;
 }
 
 div.img {
@@ -334,7 +336,7 @@ div.footer-btn a {
     text-decoration: none;
     color: #f0f0f0;
     font-size: 0.9rem;
-    padding: 10px 50px;
+    padding: 2% 5%;
     border-radius: 3px;
     letter-spacing: 2px;
 }
@@ -344,4 +346,71 @@ div.footer h6 {
     color: #88949B;
     font-size: 1rem;
     padding-top: 6rem;
+}
+
+@media screen and (max-width: 570px) {
+    div.hero-section {
+        padding: 5rem;
+    }
+    div.hero-background-pos {
+        display: none;
+    }
+    div.footer-btn a {
+        padding: 3.5% 7%;
+    }
+    div.hero-content-heading p {
+        font-size: 0.8rem;
+    }
+    div.hero-content-heading h3 {
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    div.snapshot-box-content {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .nav_menu {
+        position: fixed;
+        top: -100%;
+        left: 0;
+        width: 100%;
+        padding: 1.5rem 0 1rem;
+        text-align: center;
+        background: #304353;
+        opacity: 0.8;
+        transition: .4s;
+        box-shadow: 0 4px 4px rgba(0, 0, 0, .1);
+        border-radius: 0 0 1rem 1rem;
+        z-index: 100;
+    }
+    ul.nav-links {
+        display: block;
+        line-height: 2rem;
+    }
+    ul li {
+        margin-left: 2.5rem;
+        margin-bottom: 0;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .nav_toggle {
+        display: none;
+    }
+}
+
+.show-menu {
+    top: 3rem;
+}
+
+.nav_toggle {
+    color: #707070;
+    font-weight: 500;
+    font-size: 1.3rem;
+    cursor: pointer;
 }
